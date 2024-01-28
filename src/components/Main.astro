@@ -1,0 +1,37 @@
+---
+import MelonSoda from '../../public/images/MelonSoda.png';
+import { Image } from 'astro:assets';
+---
+
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="flex-shrink-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+<p class="text-8xl text-stroke">
+yud0uhu.dev
+</p>
+<p class="text-xl text-stroke text-center">
+    ©0yu inc.
+</p>
+</div>
+
+<div class="relative w-707 h-737">
+    <Image
+    src={MelonSoda}
+    alt="メロンソーダ"
+    loading="lazy"
+    decoding="async"
+    class="max-w-full h-auto"
+    />
+</div>
+</div>
+
+<style>
+.text-stroke {
+    color: #FEFBEB;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FF4F4B;
+    font-family: "Monomaniac One";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+</style>
