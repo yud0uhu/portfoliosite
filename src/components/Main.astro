@@ -1,37 +1,54 @@
 ---
-import MelonSoda from '../../public/images/MelonSoda.png';
-import { Image } from 'astro:assets';
+import MelonSodaAnimation from "./MelonSodaAnimation.svelte";
 ---
 
-<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-<div class="flex-shrink-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-<p class="text-8xl text-stroke">
-yud0uhu.dev
-</p>
-<p class="text-xl text-stroke text-center">
-    ©0yu inc.
-</p>
-</div>
+<div
+  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center"
+>
+  <div
+    class="flex-shrink-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+  >
+    <p class="text-8xl text-stroke">yud0uhu.dev</p>
+    <p class="text-xl text-stroke text-center">©0yu inc.</p>
+  </div>
 
-<div class="relative w-707 h-737">
-    <Image
-    src={MelonSoda}
-    alt="メロンソーダ"
-    loading="lazy"
-    decoding="async"
-    class="max-w-full h-auto"
-    />
-</div>
+  <div class="relative w-707 h-737">
+    <MelonSodaAnimation client:only />
+    <div
+      class="h-[111px] bg-opacity-20 bg-gray-300 rounded-full flex flex-col justify-center items-center"
+    >
+      <div class="gap-[62px] inline-flex">
+        <p
+          class="hover:text-[#FF4F4B] text-[#FEFBEB] text-xl italic hover:underline"
+        >
+          about me
+        </p>
+        <p
+          class="hover:text-[#FF4F4B] text-[#FEFBEB] text-xl italic italic; hover:underline"
+        >
+          work
+        </p>
+        <p
+          class="hover:text-[#FF4F4B] text-[#FEFBEB] text-xl italic italic; hover:underline"
+        >
+          contact
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style>
-.text-stroke {
-    color: #FEFBEB;
+  .text-stroke {
+    color: #fefbeb;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #FF4F4B;
+    -webkit-text-stroke-color: #ff4f4b;
     font-family: "Monomaniac One";
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
+  }
+  p {
+    font-family: "Noto Sans JP";
+  }
 </style>

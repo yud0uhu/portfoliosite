@@ -1,27 +1,32 @@
 ---
-import '../../app/globals.css'
-import Main from '../components/Main.astro';
+import "../../app/globals.css";
+import Main from "../components/Main.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
+
 <html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>yud0uhu.dev</title>
-	</head>
+  <head>
+    <ViewTransitions />
 
-	<body>
-		<main class="h-screen content-center bg-radial-gradient">
-		<Main />
-		</main>
-	</body>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>yud0uhu.dev</title>
+  </head>
+
+  <body>
+    <main
+      transition:animate="slide"
+      class="h-screen content-center bg-radial-gradient"
+    >
+      <Main />
+    </main>
+  </body><style>
+    @import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
+
+    .bg-radial-gradient {
+      background: radial-gradient(50% 50% at 50% 50%, #fff9df 0%, #01b2a8 100%);
+    }
+  </style>
 </html>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
-
-.bg-radial-gradient {
-	background: radial-gradient(50% 50% at 50% 50%, #FFF9DF 0%, #01B2A8 100%);
-}
-</style>
