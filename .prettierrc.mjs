@@ -5,7 +5,6 @@ export default {
   tabWidth: 2,
   semi: false,
   singleQuote: true,
-  pluginSearchDirs: false,
   overrides: [
     {
       files: '*.astro',
