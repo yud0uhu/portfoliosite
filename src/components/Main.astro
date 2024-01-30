@@ -9,32 +9,32 @@ import { fade } from 'astro:transitions';
   <div
     class="flex-shrink-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
   >
-    <p class="text-8xl text-stroke" transition:animate={fade({ duration: '2s' })}>yud0uhu.dev</p>
+    <p class="md:text-8xl text-6xl text-stroke" transition:animate={fade({ duration: '2s' })}>yud0uhu.dev</p>
     <p class="text-xl text-stroke text-center">©0yu inc.</p>
   </div>
 
   <div class="relative w-707 h-737">
     <MelonSodaAnimation client:only />
     <nav
-      class="nav-links mx-16 h-[111px] bg-opacity-20 bg-gray-300 rounded-full flex flex-col justify-center items-center"
+      class="nav-links h-28 bg-opacity-20 bg-gray-300 rounded-full flex flex-col justify-center items-center"
     >
-      <div class="gap-[62px] inline-flex">
+      <div class="mx-16 gap-x-8 inline-flex">
         <p
-          class="hover:text-[#FF4F4B] text-[#FEFBEB] text-xl italic hover:underline"
+          class="hover:text-[#FF4F4B] text-[#FEFBEB] md:text-xl text-sm italic hover:underline"
         >
         <a href="/about/" data-astro-reload>
           about me
         </a>
         </p>
         <p
-          class="hover:text-[#FF4F4B] text-[#FEFBEB] text-xl italic hover:underline"
+          class="hover:text-[#FF4F4B] text-[#FEFBEB] md:text-xl text-sm italic hover:underline"
         >
           <a href="/work/" data-astro-reload>
             work
           </a>
         </p>
         <p
-          class="hover:text-[#FF4F4B] text-[#FEFBEB] text-xl italic hover:underline"
+          class="hover:text-[#FF4F4B] text-[#FEFBEB] md:text-xl text-sm italic hover:underline"
         >
           <a href="/work/" data-astro-reload>
             contact
