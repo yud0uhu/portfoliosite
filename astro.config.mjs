@@ -14,7 +14,4 @@ export default defineConfig({
   ],
   output: "server",
   adapter: cloudflare(),
-  experimental: {
-    viewTransitions: true,
-  },
 });
