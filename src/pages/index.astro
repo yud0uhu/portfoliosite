@@ -1,7 +1,7 @@
 ---
-import "../../app/globals.css";
-import Main from "../components/Main.astro";
-import { ViewTransitions } from "astro:transitions";
+import '../../app/globals.css'
+import Main from '../components/Main.astro'
+import { ViewTransitions } from 'astro:transitions'
 ---
 
 <html lang="ja" transition:animate="none">
@@ -16,16 +16,19 @@ import { ViewTransitions } from "astro:transitions";
   </head>
 
   <body>
-    <main
-      class="h-screen content-center bg-radial-gradient"
-    >
+    <main class="h-screen content-center bg-radial-gradient">
       <Main />
     </main>
-  </body><style>
-    @import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
 
-    .bg-radial-gradient {
-      background: radial-gradient(50% 50% at 50% 50%, #fff9df 0%, #01b2a8 100%);
-    }
-  </style>
+      .bg-radial-gradient {
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #fff9df 0%,
+          #01b2a8 100%
+        );
+      }
+    </style>
+  </body>
 </html>

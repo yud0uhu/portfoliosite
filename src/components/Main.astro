@@ -1,6 +1,6 @@
 ---
-import MelonSodaAnimation from "./MelonSodaAnimation.svelte";
-import { fade } from 'astro:transitions';
+import MelonSodaAnimation from './MelonSodaAnimation.svelte'
+import { fade } from 'astro:transitions'
 ---
 
 <div
@@ -9,7 +9,12 @@ import { fade } from 'astro:transitions';
   <div
     class="flex-shrink-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
   >
-    <p class="md:text-8xl text-6xl text-stroke" transition:animate={fade({ duration: '2s' })}>yud0uhu.dev</p>
+    <p
+      class="md:text-8xl text-6xl text-stroke"
+      transition:animate={fade({ duration: '2s' })}
+    >
+      yud0uhu.dev
+    </p>
     <p class="text-xl text-stroke text-center">©0yu inc.</p>
   </div>
 
@@ -22,23 +27,17 @@ import { fade } from 'astro:transitions';
         <p
           class="hover:text-[#FF4F4B] text-[#FEFBEB] md:text-xl text-sm italic hover:underline"
         >
-        <a href="/about/" data-astro-reload>
-          about me
-        </a>
+          <a href="/about/" data-astro-reload> about me </a>
         </p>
         <p
           class="hover:text-[#FF4F4B] text-[#FEFBEB] md:text-xl text-sm italic hover:underline"
         >
-          <a href="/work/" data-astro-reload>
-            work
-          </a>
+          <a href="/work/" data-astro-reload> work </a>
         </p>
         <p
           class="hover:text-[#FF4F4B] text-[#FEFBEB] md:text-xl text-sm italic hover:underline"
         >
-          <a href="/work/" data-astro-reload>
-            contact
-          </a>
+          <a href="/work/" data-astro-reload> feed </a>
         </p>
       </div>
     </nav>
@@ -50,12 +49,12 @@ import { fade } from 'astro:transitions';
     color: #fefbeb;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #ff4f4b;
-    font-family: "Monomaniac One";
+    font-family: 'Monomaniac One';
     font-style: normal;
     font-weight: 400;
     line-height: normal;
   }
   p {
-    font-family: "Noto Sans JP";
+    font-family: 'Noto Sans JP';
   }
 </style>
