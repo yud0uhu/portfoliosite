@@ -1,10 +1,12 @@
 ---
 import "../../app/globals.css";
-import Main from "../components/Main.astro";
+import AboutMe from "../components/AboutMe.astro";
 import { ViewTransitions } from "astro:transitions";
+import { slide } from 'astro:transitions';
 ---
 
-<html lang="ja" transition:animate="none">
+
+<html lang="ja">
   <head>
     <ViewTransitions />
 
@@ -15,13 +17,12 @@ import { ViewTransitions } from "astro:transitions";
     <title>yud0uhu.dev</title>
   </head>
 
-  <body>
-    <main
-      class="h-screen content-center bg-radial-gradient"
-    >
-      <Main client:load />
-    </main>
-  </body><style>
+  <body transition:persist transition:animate={slide({ duration: '1s'})}>
+    <main class="slide w-full h-screen content-center bg-amber-50">
+	<AboutMe />
+	  </main>
+  </body>
+  <style>
     @import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
 
     .bg-radial-gradient {
