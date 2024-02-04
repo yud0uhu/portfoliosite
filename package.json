@@ -10,7 +10,7 @@
     "astro": "astro",
     "prepare": "husky install",
     "deploy": "npx wrangler pages deploy dist",
-    "fmt": "prettier --write ."
+    "fmt": "bunx @biomejs/biome format src --write"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
