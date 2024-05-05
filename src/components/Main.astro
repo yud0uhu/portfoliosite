@@ -1,6 +1,7 @@
 ---
 import MelonSodaAnimation from './MelonSodaAnimation.svelte'
 import { fade } from 'astro:transitions'
+import NavLink from './NavLink.astro'
 ---
 
 <div
@@ -18,27 +19,15 @@ import { fade } from 'astro:transitions'
     <p class="text-xl text-stroke text-center">©0yu inc.</p>
   </div>
 
-  <div class="relative w-707 h-737">
+  <div class="relative w-707 h-full">
     <MelonSodaAnimation client:only />
     <nav
       class="nav-links h-28 bg-opacity-20 bg-gray-300 rounded-full flex flex-col justify-center items-center"
     >
       <div class="mx-16 gap-x-8 inline-flex">
-        <p
-          class="hover:text-[#FF4F4B] text-[#FEFBEB] md:text-xl text-sm italic hover:underline"
-        >
-          <a href="/about/" data-astro-reload> about me </a>
-        </p>
-        <p
-          class="hover:text-[#FF4F4B] text-[#FEFBEB] md:text-xl text-sm italic hover:underline"
-        >
-          <a href="/work/" data-astro-reload> work </a>
-        </p>
-        <p
-          class="hover:text-[#FF4F4B] text-[#FEFBEB] md:text-xl text-sm italic hover:underline"
-        >
-          <a href="/work/" data-astro-reload> feed </a>
-        </p>
+        <NavLink href="/about/" text="about" />
+        <NavLink href="/work/" text="work" />
+        <NavLink href="/work/" text="feed" />
       </div>
     </nav>
   </div>

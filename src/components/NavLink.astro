@@ -1,0 +1,15 @@
+---
+const {href, text} = Astro.props;
+---
+
+<p
+class="hover:text-stroke text-white md:text-xl text-sm italic hover:underline"
+>
+<a href={href} data-astro-reload>{text}</a>
+</p>
+
+<style>
+  p {
+    font-family: 'Noto Sans JP';
+  }
+</style>

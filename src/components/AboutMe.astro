@@ -1,10 +1,12 @@
 ---
+import NavLink from "./NavLink.astro"
+import { Image } from 'astro:assets';
 
 ---
 
 <div class="w-full justify-start items-start gap-2.5 inline-flex">
   <div
-    class="w-full h-64 bg-gradient-to-b from-teal-500 via-emerald-300 to-yellow-50"
+    class="w-full h-screen bg-gradient-to-b from-teal-500 via-emerald-300 to-yellow-50"
   >
   </div>
 
@@ -17,21 +19,12 @@
   <div class="hidden md:block md:right-0 right-[861px] top-[29px] absolute">
     <!-- Navigation Links (Visible on Desktop) -->
     <div class="w-96 h-8 justify-start items-start gap-16 inline-flex">
-      <div
-        class="w-28 h-8 text-amber-50 text-2xl font-normal font-['Noto Sans'] hover:text-[#FF4F4B] hover:underline"
-      >
-        about me
+      <div class="mx-16 gap-x-8 inline-flex">
+        <NavLink href="/about/" text="about" />
+        <NavLink href="/work/" text="work" />
+        <NavLink href="/work/" text="feed" />
       </div>
-      <div
-        class="w-16 h-8 text-amber-50 text-2xl font-normal font-['Noto Sans'] hover:text-[#FF4F4B] *:hover:underline"
-      >
-        work
-      </div>
-      <div
-        class="w-28 h-8 text-amber-50 text-2xl font-normal font-['Noto Sans'] hover:text-[#FF4F4B] hover:underline"
-      >
-        feed
-      </div>
+      
     </div>
   </div>
 
@@ -39,30 +32,22 @@
   <div
     class="hidden md:hidden absolute top-14 right-2 w-40 bg-white border border-gray-300 p-2 rounded"
   >
-    <div
-      class="text-amber-50 text-xl font-normal font-['Noto Sans'] hover:text-[#FF4F4B] hover:underline"
-    >
-      about me
-    </div>
-    <div
-      class="text-amber-50 text-xl font-normal font-['Noto Sans'] hover:text-[#FF4F4B] hover:underline"
-    >
-      work
-    </div>
-    <div
-      class="text-amber-50 text-xl font-normal font-['Noto Sans'] hover:text-[#FF4F4B] hover:underline"
-    >
-      feed
-    </div>
+  <div class="mx-16 gap-x-8 inline-flex">
+    <NavLink href="/about/" text="about" />
+    <NavLink href="/work/" text="work" />
+    <NavLink href="/work/" text="feed" />
+  </div>
   </div>
 
   <div
     class="w-full absolute flex flex-col items-center justify-center top-[156px]"
   >
     <div class="text-stroke text-8xl">about me</div>
-    <img
-      class="w-80 mt-4 rounded-full"
-      src="https://pbs.twimg.com/profile_images/1255840795157860352/IyDL33uk_400x400.jpg"
+    <Image src="/images/Icon.jpeg"
+      class="mt-4 rounded-full"
+      alt="アイコン"
+      width={200}
+      height={200}
     />
     <p class="text-xl font-normal mt-4">トライフォースの勇者です</p>
   </div>
@@ -72,7 +57,7 @@
   .text-stroke {
     color: #fefbeb;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #ff4f4b;
+    -webkit-text-stroke-color: text-stroke;
     font-family: 'Monomaniac One';
     font-style: normal;
     font-weight: 400;
