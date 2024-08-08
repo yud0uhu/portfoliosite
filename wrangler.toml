@@ -1,0 +1,4 @@
+[[d1_databases]]
+binding = "DB" # available in your Worker on env.DB
+database_name = "portfolio_site_db"
+database_id = "89bf8863-44b3-4246-8a8a-b5b044448dfd"
