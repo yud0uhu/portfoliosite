@@ -1,12 +1,9 @@
 ---
 import '../../app/globals.css'
-import Main from '../components/MainComponents.astro'
-import { ViewTransitions } from 'astro:transitions'
+import MainComponents from '../components/MainComponents.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="yud0uhu.dev">
-  <main transition:animate="slide" class="h-screen content-center bg-radial-gradient">
-    <Main />
-  </main>
+  <MainComponents />
 </Layout>

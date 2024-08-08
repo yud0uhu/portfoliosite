@@ -5,8 +5,7 @@ import MelonSodaAnimation from './MelonSodaAnimation.svelte'
   document.addEventListener('astro:after-swap',
   () => window.scrollTo({ left: 0, top: 0, behavior: 'instant' }))
 </script>
-<div
-  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center"
+<div transition:animate="slide" class="h-screen w-full content-center bg-radial-gradient absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center"
 >
   <div
     class="flex-shrink-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
@@ -43,15 +42,3 @@ import MelonSodaAnimation from './MelonSodaAnimation.svelte'
     </nav>
   </div>
 </div>
-
-<style>
-  .text-stroke {
-    color: #fefbeb;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #ff4f4b;
-    font-family: 'Monomaniac One';
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-</style>
