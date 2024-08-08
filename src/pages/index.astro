@@ -1,34 +1,12 @@
 ---
 import '../../app/globals.css'
-import Main from '../components/Main.astro'
+import Main from '../components/MainComponents.astro'
 import { ViewTransitions } from 'astro:transitions'
+import Layout from '../layouts/Layout.astro'
 ---
 
-<html lang="ja" transition:animate="none">
-  <head>
-    <ViewTransitions />
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>yud0uhu.dev</title>
-  </head>
-
-  <body>
-    <main class="h-screen content-center bg-radial-gradient">
-      <Main />
-    </main>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
-
-      .bg-radial-gradient {
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          #fff9df 0%,
-          #01b2a8 100%
-        );
-      }
-    </style>
-  </body>
-</html>
+<Layout title="yud0uhu.dev">
+  <main transition:animate="slide" class="h-screen content-center bg-radial-gradient">
+    <Main />
+  </main>
+</Layout>
