@@ -1,35 +1,13 @@
 ---
-import MelonSodaAnimation from './MelonSodaAnimation.svelte'
-import {cn} from "../lib/utils.ts"
+import Logo from './Logo.astro'
+import Navigation from './Navigation.astro'
+import { cn } from "../lib/utils.ts"
 ---
 <script>
   document.addEventListener('astro:after-swap',
   () => window.scrollTo({ left: 0, top: 0, behavior: 'instant' }))
 </script>
 <div transition:animate="slide" class={cn(["h-screen", "w-full", "content-center", "bg-radial-gradient", "absolute", "top-1/2", "left-1/2", "transform", "-translate-x-1/2", "-translate-y-1/2", "flex", "flex-col", "items-center"])}>
-  <div class={cn(["flex-shrink-0", "absolute", "top-1/2", "left-1/2", "transform", "-translate-x-1/2", "-translate-y-1/2", "z-10"])}>
-    <p class={cn(["md:text-8xl", "text-6xl", "text-stroke"])}>
-      yud0uhu.dev
-    </p>
-    <p class={cn(["text-xl", "text-stroke", "text-center"])}>
-      ©0yu inc.
-    </p>
-  </div>
-
-  <div class={cn(["relative", "w-707", "h-737"])}>
-    <MelonSodaAnimation client:only />
-    <nav class={cn(["nav-links", "h-28", "bg-opacity-20", "bg-gray-300", "rounded-full", "flex", "flex-col", "justify-center", "items-center"])}>
-      <div class={cn(["mx-16", "gap-x-8", "inline-flex"])}>
-        <p class={cn(["hover:text-[#FF4F4B]", "text-[#FEFBEB]", "md:text-xl", "text-sm", "italic", "hover:underline"])}>
-          <a href="/about/" data-astro-reload> about me </a>
-        </p>
-        <p class={cn(["hover:text-[#FF4F4B]", "text-[#FEFBEB]", "md:text-xl", "text-sm", "italic", "hover:underline"])}>
-          <a href="/work/" data-astro-reload> work </a>
-        </p>
-        <p class={cn(["hover:text-[#FF4F4B]", "text-[#FEFBEB]", "md:text-xl", "text-sm", "italic", "hover:underline"])}>
-          <a href="/work/" data-astro-reload> feed </a>
-        </p>
-      </div>
-    </nav>
-  </div>
+  <Logo />
+  <Navigation />
 </div>
