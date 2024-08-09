@@ -1,44 +1,13 @@
 ---
-import {cn} from "../lib/utils.ts"
+import { cn } from "../lib/utils.ts"
+import NavigationMenu from './NavigationMenu.svelte'
 ---
 
 <div transition:animate="slide" class={cn(["slide", "w-full", "h-screen", "content-center", "bg-amber-50", "justify-start", "items-start", "gap-2.5", "inline-flex"])}>
   <div class={cn(["w-full", "h-64", "bg-gradient-to-b", "from-teal-500", "via-emerald-300", "to-yellow-50"])}>
   </div>
 
-  <!-- Hamburger Menu Container -->
-  <div class={cn(["md:hidden", "absolute", "top-2", "right-2", "cursor-pointer"])}>
-    <!-- Hamburger menu icon or toggle button -->
-    <div>☰</div>
-  </div>
-
-  <div class={cn(["hidden", "md:block", "md:right-0", "right-[861px]", "top-[29px]", "absolute"])}>
-    <!-- Navigation Links (Visible on Desktop) -->
-    <div class={cn(["w-96", "h-8", "justify-start", "items-start", "gap-16", "inline-flex"])}>
-      <!-- <div class={cn(["w-28", "h-8", "text-amber-50", "text-2xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
-        about me
-      </div> -->
-      <div class={cn(["w-16", "h-8", "text-amber-50", "text-2xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "*:hover:underline"])}>
-        work
-      </div>
-      <div class={cn(["w-28", "h-8", "text-amber-50", "text-2xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
-        feed
-      </div>
-    </div>
-  </div>
-
-  <!-- Mobile Navigation Links (Initially Hidden) -->
-  <div class={cn(["hidden", "md:hidden", "absolute", "top-14", "right-2", "w-40", "bg-white", "border", "border-gray-300", "p-2", "rounded"])}>
-    <div class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
-      about me
-    </div>
-    <div class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
-      work
-    </div>
-    <div class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
-      feed
-    </div>
-  </div>
+  <NavigationMenu />
 
   <div class={cn(["w-full", "absolute", "flex", "flex-col", "items-center", "justify-center", "top-[156px]"])}>
     <div class={cn(["text-stroke", "text-8xl"])}>about me</div>
@@ -46,14 +15,3 @@ import {cn} from "../lib/utils.ts"
     <p class={cn(["text-xl", "font-normal", "mt-4"])}>トライフォースの勇者です</p>
   </div>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuIcon = document.querySelector('.top-2.right-2.cursor-pointer')
-    const mobileMenu = document.querySelector('.md\\:hidden.absolute.top-14.right-2')
-
-    menuIcon?.addEventListener('click', function () {
-      mobileMenu?.classList.toggle('hidden')
-    })
-  })
-</script>
