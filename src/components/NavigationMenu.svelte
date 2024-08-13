@@ -33,10 +33,7 @@ function toggleMenu() {
 <a href="/about/" class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
     about me
 </a>
-<!-- <a href="/work/" class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
-    work
+<a href="/work/" class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
+    🚧work
 </a>
-<a href="/feed/" class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
-    feed
-</a> -->
 </div>
