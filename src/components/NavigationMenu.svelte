@@ -20,12 +20,12 @@ function toggleMenu() {
     <a href="/" class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
     about me
     </a>
-    <a href="/work/" class={cn(["w-16", "h-8", "text-amber-50", "text-2xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
+    <!-- <a href="/work/" class={cn(["w-16", "h-8", "text-amber-50", "text-2xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
     work
     </a>
     <a href="/feed/" class={cn(["w-28", "h-8", "text-amber-50", "text-2xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
     feed
-    </a>
+    </a> -->
 </div>
 </div>
 
@@ -33,10 +33,10 @@ function toggleMenu() {
 <a href="/about/" class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
     about me
 </a>
-<a href="/work/" class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
+<!-- <a href="/work/" class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
     work
 </a>
 <a href="/feed/" class={cn(["text-amber-50", "text-xl", "font-normal", "font-['Noto Sans']", "hover:text-[#FF4F4B]", "hover:underline"])}>
     feed
-</a>
+</a> -->
 </div>
