@@ -1,0 +1,15 @@
+---
+import { cn } from "../lib/utils.ts"
+import NavigationMenu from './NavigationMenu.svelte'
+---
+
+<div transition:animate="slide" class={cn(["slide", "w-full", "h-screen", "content-center", "bg-amber-50", "justify-start", "items-start", "gap-2.5", "inline-flex"])}>
+  <div class={cn(["w-full", "h-64", "bg-gradient-to-b", "from-teal-500", "via-emerald-300", "to-yellow-50"])}>
+  </div>
+
+  <NavigationMenu />
+
+  <div class={cn(["w-full", "absolute", "flex", "flex-col", "items-center", "justify-center", "top-[156px]"])}>
+    <div class={cn(["text-stroke", "text-8xl"])}>🚧Work</div>
+  </div>
+</div>

@@ -1,34 +1,9 @@
 ---
 import '../../app/globals.css'
-import { ViewTransitions, slide } from 'astro:transitions'
-import WorkComponents from '../components/Work.astro'
+import WorkComponents from '../components/WorkComponents.astro'
+import Layout from '../layouts/Layout.astro'
 ---
 
-<html lang="ja">
-  <head>
-    <ViewTransitions />
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>yud0uhu.dev</title>
-  </head>
-
-  <body transition:persist transition:animate={slide({ duration: '1s' })}>
-    <main class="slide w-full content-center bg-amber-50">
-        <WorkComponents />
-    </main>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
-
-      .bg-radial-gradient {
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          #fff9df 0%,
-          #01b2a8 100%
-        );
-      }
-    </style>
-  </body>
-</html>
+<Layout title="yud0uhu.dev">
+  <WorkComponents />
+</Layout>
