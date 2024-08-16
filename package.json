@@ -31,6 +31,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
+    "@skeletonlabs/skeleton": "^2.9.2",
+    "@skeletonlabs/tw-plugin": "^0.4.0",
     "@typescript-eslint/parser": "^6.20.0",
     "commitlint-config-gitmoji": "^2.3.1",
     "eslint": "^8.56.0",
@@ -41,6 +43,7 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "husky": "^8.0.0",
+    "microcms-js-sdk": "^3.1.1",
     "npm-run-all": "^4.1.5",
     "prettier-plugin-svelte": "^3.1.2"
   },
