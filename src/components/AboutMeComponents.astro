@@ -1,30 +1,122 @@
 ---
-import { cn } from "../lib/utils.ts"
-import NavigationMenu from './NavigationMenu.svelte'
+import { cn } from "../lib/utils.ts";
+import NavigationMenu from "./NavigationMenu.svelte";
 ---
 
-<div transition:animate="slide" class={cn(["slide", "w-full", "h-screen", "content-center", "bg-amber-50", "justify-start", "items-start", "gap-2.5", "inline-flex"])}>
-  <div class={cn(["w-full", "h-64", "bg-gradient-to-b", "from-teal-500", "via-emerald-300", "to-yellow-50"])}>
+<div
+  transition:animate="slide"
+  class={cn([
+    "slide",
+    "w-full",
+    "h-screen",
+    "content-center",
+    "bg-amber-50",
+    "justify-start",
+    "items-start",
+    "gap-2.5",
+    "inline-flex",
+  ])}
+>
+  <div
+    class={cn([
+      "w-full",
+      "h-64",
+      "bg-gradient-to-b",
+      "from-teal-500",
+      "via-emerald-300",
+      "to-yellow-50",
+    ])}
+  >
   </div>
 
   <NavigationMenu />
 
-  <div class={cn(["w-full", "absolute", "flex", "flex-col", "items-center", "justify-center", "top-40"])}>
+  <div
+    class={cn([
+      "w-full",
+      "absolute",
+      "flex",
+      "flex-col",
+      "items-center",
+      "justify-center",
+      "top-40",
+    ])}
+  >
     <div class={cn(["text-stroke", "text-8xl"])}>about me</div>
     <!-- <img class={cn(["w-80", "mt-4", "rounded-full"])} src="https://images.microcms-assets.io/assets/f87684e4177d4c098570ab41c2418210/774f62c35dc646fd9aa4cb9d9150ecae/profile.jpg?w=300" /> -->
     <!-- <p class={cn(["flex", "text-xl", "sp:text-sm", "m-4"])}>WebとRustが好きなフロントエンドエンジニア</p> -->
     <div class={cn(["flex", "space-x-4", "mt-4"])}>
-      <a href="https://speakerdeck.com/yud0uhu" target="_blank" rel="noopener noreferrer">
-        <img src="/images/speakerdeck-icon.svg" alt="SpeakerDeck" class={cn(["w-12", "inline-block", "bg-white", "border", "border-black", "p-2"])}/>
+      <a
+        href="https://speakerdeck.com/yud0uhu"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/images/speakerdeck-icon.svg"
+          alt="SpeakerDeck"
+          class={cn([
+            "w-12",
+            "inline-block",
+            "bg-white",
+            "border",
+            "border-black",
+            "p-2",
+          ])}
+        />
       </a>
-      <a href="https://github.com/yud0uhu" target="_blank" rel="noopener noreferrer">
-        <img src="/images/github-mark.svg" alt="Github" class={cn(["w-12", "inline-block", "bg-white", "border", "border-black", "p-2"])}/>
+      <a
+        href="https://github.com/yud0uhu"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/images/github-mark.svg"
+          alt="Github"
+          class={cn([
+            "w-12",
+            "inline-block",
+            "bg-white",
+            "border",
+            "border-black",
+            "p-2",
+          ])}
+        />
       </a>
-      <a href="https://hackteck.hatenablog.com" target="_blank" rel="noopener noreferrer">
-        <img src="/images/hatenablog-logo.svg" alt="Hatenablog" class={cn(["w-12", "inline-block", "bg-white", "border", "border-black", "p-2"])}/>
+      <a
+        href="https://hackteck.hatenablog.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/images/hatenablog-logo.svg"
+          alt="Hatenablog"
+          class={cn([
+            "w-12",
+            "inline-block",
+            "bg-white",
+            "border",
+            "border-black",
+            "p-2",
+          ])}
+        />
       </a>
-      <a href="https://zenn.dev/denham" target="_blank" rel="noopener noreferrer">
-        <img src="/images/logo-only.svg" alt="zenn" class={cn(["w-12", "inline-block", "bg-white", "border", "border-black", "p-2"])}/>
+      <a
+        href="https://zenn.dev/denham"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/images/logo-only.svg"
+          alt="zenn"
+          class={cn([
+            "w-12",
+            "inline-block",
+            "bg-white",
+            "border",
+            "border-black",
+            "p-2",
+          ])}
+        />
       </a>
     </div>
   </div>
