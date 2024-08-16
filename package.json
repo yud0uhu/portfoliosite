@@ -8,9 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky install",
     "deploy": "npx wrangler pages deploy dist",
-    "fmt": "bunx @biomejs/biome format src --write"
+    "fmt": "bunx prettier --write ."
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
@@ -31,7 +30,6 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.5.3",
     "@skeletonlabs/skeleton": "^2.9.2",
     "@skeletonlabs/tw-plugin": "^0.4.0",
     "@typescript-eslint/parser": "^6.20.0",
@@ -47,9 +45,7 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "microcms-js-sdk": "^3.1.1",
-    "husky": "^9.1.4",
     "kit-monorepo": "sveltejs/kit",
-    "lint-staged": "^15.2.8",
     "npm-run-all": "^4.1.5",
     "prettier-plugin-svelte": "^3.1.2",
     "tailwind-merge": "^2.4.0"
