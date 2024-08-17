@@ -2,9 +2,7 @@
 const { href, text } = Astro.props;
 ---
 
-<p
-  class="hover:text-stroke text-white md:text-xl text-sm italic hover:underline"
->
+<p class="hover:text-stroke text-white text-xl italic hover:underline">
   <a href={href} data-astro-reload>{text}</a>
 </p>
 
