@@ -8,7 +8,6 @@ import { cn } from "../lib/utils.ts";
   <nav
     class={cn([
       "z-100",
-      "nav-links",
       "h-28",
       "m-2",
       "bg-opacity-20",
@@ -48,14 +47,3 @@ import { cn } from "../lib/utils.ts";
     </div>
   </nav>
 </div>
-
-<style>
-  @media (max-width: 768px) {
-    .nav-links {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-</style>
