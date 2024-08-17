@@ -1,35 +1,43 @@
-<script lang="ts">
-  import { onMount } from 'svelte';
-  import { getList } from '../lib/microcms.ts';
-  import type { WorksResponse } from '../lib/microcms.ts';
+<script>
+  import { cn } from "../lib/utils.ts";
+  import { writable } from "svelte/store";
+  export let response;
+  let showAllContent = writable(false);
 
-  let worksResponse: WorksResponse | null = null;
-
-  onMount(async () => {
-    try {
-      worksResponse = await getList();
-      console.log("Received data:", worksResponse);
-    } catch (error) {
-      console.error('Error fetching data:', error);
+  function handleClick() {
+    showAllContent.set(true);
+    const moreButton = document.querySelector(".more-button");
+    if (moreButton) {
+      moreButton.classList.add("hidden");
     }
-  });
+  }
 </script>
 
-{#if worksResponse}
-  <div>
-    <h1>Works</h1>
-    {#each worksResponse.contents as work}
-      <div>
-        <h2>{work.productTitle}</h2>
-        <p>{work.productData}</p>
-        <a href={work.githubUrl}>GitHub</a>
-        <p>{work.productDatail}</p>
-        <p>{work.productComposition}</p>
-        <img src={work.productImage} alt={work.productTitle} />
-        <a href={work.productUrl}>Product URL</a>
+<div class={cn(["flex", "flex-col", "h-full", "bg-yellow-50"])}>
+  <div class={cn(["p-4", "grid", "grid-cols-3", "gap-4", "justify-center", "items-center", "content-div"])}>
+    {#each response.contents as content, index}
+      <div class={cn(["w-full", "h-full", "p-4", "border", "border-[#ff4f4b]", "flex-shrink-0", index >= 3 && !$showAllContent ? "hidden" : ""])}>
+        <h2 class={cn(["text-xl", "font-semibold", "text-gray-800"])}>{content.productTitle}</h2>
+        <p class={cn(["text-sm", "text-gray-600"])}>{content.productData}</p>
+        <a href={content.githubUrl} class={cn(["text-teal-500", "hover:underline"])}>GitHub</a>
+        <p class={cn(["text-sm", "text-gray-600"])}>{content.productDatail}</p>
+        <p class={cn(["text-sm", "text-emerald-300"])}>{content.productComposition}</p>
+        <a href={content.productUrl} class={cn(["text-teal-500", "hover:underline"])}>URL</a>
       </div>
     {/each}
   </div>
-{:else}
-  <p>Loading...</p>
-{/if}
+  <div class={cn(["flex", "justify-center", "items-center", "w-screen"])}>
+    <button on:click={handleClick} class={cn(["mt-4", "px-4", "py-2", "bg-teal-500", "text-white", "rounded", "hover:bg-teal-600", "more-button"])}>
+      もっと見る
+    </button>
+  </div>
+</div>
+
+<style>
+  .hidden {
+    display: none;
+  }
+  .more-button.hidden {
+    display: none;
+  }
+</style>

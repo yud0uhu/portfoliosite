@@ -17,7 +17,7 @@ function toggleMenu() {
         about me
         </a>
         <a href="/work/" class={cn(["text-amber-50", "text-xl", "hover:text-[#FF4F4B]", "hover:underline"])}>
-        🚧work
+        work
         </a>
     </div>
 </div>
