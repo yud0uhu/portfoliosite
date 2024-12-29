@@ -16,6 +16,7 @@
     "@astrojs/cloudflare": "^9.0.0",
     "@astrojs/svelte": "^5.7.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@lottiefiles/dotlottie-svelte": "^0.4.3",
     "@lottiefiles/svelte-lottie-player": "^0.3.1",
     "astro": "^4.2.1",
     "class-variance-authority": "^0.7.0",
