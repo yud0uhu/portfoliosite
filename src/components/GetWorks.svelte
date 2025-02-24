@@ -31,7 +31,9 @@
         /></a>
         <p class={cn(["text-sm", "text-gray-600", "break-words"])}>{content.productDatail}</p>
         <p class={cn(["text-sm", "text-emerald-300", "break-words"])}>{content.productComposition}</p>
-        <a href={content.productUrl} class={cn(["text-teal-500", "hover:underline"])}>URL</a>
+        {#if content.productUrl}
+        <a href={content.productUrl} class={cn(["text-teal-500", "hover:underline"])}>DemoSite</a>
+        {/if}
       </div>
     {/each}
   </div>
