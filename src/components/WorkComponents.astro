@@ -79,9 +79,11 @@ const dailyUIResponse = await getDailyUIList({
         "justify-center",
       ])}
     >
-      <p class={cn(["text-stroke", "text-8xl"])}>Engineering</p>
+      <p class={cn(["text-stroke", "md:text-4xl", "text-base"])}>Engineering</p>
       <GetWorks client:only {worksResponse} />
-      <p class={cn(["text-stroke", "text-8xl"])}>Daily UI Challenge</p>
+      <p class={cn(["text-stroke", "md:text-4xl", "text-base"])}>
+        Daily UI Challenge
+      </p>
       <GetDailyUI client:only {dailyUIResponse} />
     </div>
   </div>
