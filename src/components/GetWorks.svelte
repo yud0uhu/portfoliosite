@@ -1,7 +1,7 @@
 <script lang="ts">
   import { cn } from "../lib/utils.ts";
   import { writable } from "svelte/store";
-  export let response;
+  export let worksResponse;
   const showAllContent = writable(false);
 
   function handleClick() {
@@ -15,7 +15,7 @@
 
 <div class={cn(["flex", "flex-col", "p-4","h-full", "bg-yellow-50"])}>
   <div class={cn(["p-4", "grid", "grid-cols-1", "md:grid-cols-3", "gap-4", "justify-center", "items-center", "content-div"])}>
-    {#each response.contents as content, index}
+    {#each worksResponse.contents as content, index}
       <div class={cn(["w-full", "h-auto", "p-4", "border", "border-[#ff4f4b]", "flex-shrink-0", index >= 3 && !$showAllContent ? "hidden" : ""])}>
         <h2 class={cn(["text-xl", "font-semibold", "text-gray-800"])}>{content.productTitle}</h2>
         <p class={cn(["text-sm", "text-gray-600", "break-words"])}>{content.productData}</p>
@@ -32,7 +32,7 @@
         <p class={cn(["text-sm", "text-gray-600", "break-words"])}>{content.productDatail}</p>
         <p class={cn(["text-sm", "text-emerald-300", "break-words"])}>{content.productComposition}</p>
         {#if content.productUrl}
-        <a href={content.productUrl} class={cn(["text-teal-500", "hover:underline"])}>DemoSite</a>
+        <a href={content.productUrl} class={cn(["text-teal-500", "hover:underline"])}>作品を見る</a>
         {/if}
       </div>
     {/each}
