@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { cn } from "../lib/utils.ts";
+  import { cn } from "../lib/utils";
   import { writable } from "svelte/store";
   export let worksResponse;
   const showAllContent = writable(false);

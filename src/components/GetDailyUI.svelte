@@ -1,5 +1,5 @@
-<script lang="ts">
-  import { cn } from "../lib/utils.ts";
+<script>
+  import { cn } from "../lib/utils";
   import { writable } from "svelte/store";
   import { onMount } from 'svelte';
   export let dailyUIResponse;
@@ -8,7 +8,7 @@
 
   let divs = dailyUIResponse.contents.map(() => null);
   let scrolls = writable(dailyUIResponse.contents.map(() => false));
-  console.log(dailyUIResponse.contents)
+
   function handleClick() {
     showAllContent.set(true);
     const moreButton = document.querySelector(".daily-ui-more-button");
