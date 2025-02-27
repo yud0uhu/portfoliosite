@@ -79,7 +79,9 @@
             ><img
               src="/images/github-mark.svg"
               alt="Github"
-              class={cn(["w-12", "border-[#ff4f4b]", "p-2"])}
+              width="24"
+              height="24"
+              class={cn(["w-12", "h-12", "border-[#ff4f4b]", "p-2"])}
             /></a
           >
           <p class={cn(["text-sm", "text-gray-600", "break-words"])}>
