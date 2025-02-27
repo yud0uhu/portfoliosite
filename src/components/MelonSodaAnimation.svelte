@@ -1,13 +1,9 @@
-<script>
-  import { LottiePlayer } from '@lottiefiles/svelte-lottie-player'
-</script>
-
-<LottiePlayer
-  src="https://lottie.host/937512b8-72f3-4060-87e1-85e2704a61e3/8auIurXqjI.json"
-  autoplay={true}
-  loop={false}
-  renderer="svg"
-  background="transparent"
-  height="100%"
-  width="100%"
-/>
+<script lang="ts">
+  import { DotLottieSvelte } from '@lottiefiles/dotlottie-svelte';
+  </script>
+  
+  <DotLottieSvelte
+    src="https://lottie.host/71ce8733-fd4b-4794-9de1-f9c648f3d5af/2Gkw52ei5Y.lottie"
+    loop
+    autoplay
+  />

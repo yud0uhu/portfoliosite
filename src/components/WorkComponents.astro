@@ -3,9 +3,10 @@ import { cn } from "../lib/utils.ts";
 import GetWorks from "./GetWorks.svelte";
 import NavigationMenu from "./NavigationMenu.svelte";
 
-import { getList } from "../lib/microcms";
+import { getList, getDailyUIList } from "../lib/microcms";
+import GetDailyUI from "./GetDailyUI.svelte";
 
-const response = await getList({
+const worksResponse = await getList({
   fields: [
     "productTitle",
     "productData",
@@ -15,6 +16,10 @@ const response = await getList({
     "productImage",
     "productUrl",
   ],
+});
+
+const dailyUIResponse = await getDailyUIList({
+  fields: ["title", "image", "figma"],
 });
 ---
 
@@ -62,8 +67,24 @@ const response = await getList({
       "top-40",
     ])}
   >
-    <div class={cn(["text-stroke", "text-8xl"])}>Work</div>
+    <p class={cn(["text-stroke", "text-8xl"])}>Work</p>
 
-    <GetWorks client:only {response} />
+    <div
+      class={cn([
+        "bg-amber-50",
+        "w-full",
+        "flex",
+        "flex-col",
+        "items-center",
+        "justify-center",
+      ])}
+    >
+      <p class={cn(["text-stroke", "md:text-4xl", "text-base"])}>Engineering</p>
+      <GetWorks client:only {worksResponse} />
+      <p class={cn(["text-stroke", "md:text-4xl", "text-base"])}>
+        Daily UI Challenge
+      </p>
+      <GetDailyUI client:only {dailyUIResponse} />
+    </div>
   </div>
 </div>
