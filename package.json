@@ -18,6 +18,7 @@
     "@astrojs/tailwind": "6.0.0",
     "@lottiefiles/dotlottie-svelte": "^0.4.6",
     "astro": "5.4.0",
+    "astro-compress": "^2.3.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.320.0",
