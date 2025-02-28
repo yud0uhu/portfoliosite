@@ -29,7 +29,6 @@
     let observer = new IntersectionObserver(callback, { threshold: 0.1 });
 
     divs.forEach((div, index) => {
-      console.log(divs);
       if (div) {
         div.dataset.index = index;
         observer.observe(div);
