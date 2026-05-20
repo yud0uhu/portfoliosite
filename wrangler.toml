@@ -1,4 +1,7 @@
-[[d1_databases]]
-binding = "DB" # available in your Worker on env.DB
-database_name = "portfolio_site_db"
-database_id = "89bf8863-44b3-4246-8a8a-b5b044448dfd"
+name = "portfoliosite"
+compatibility_date = "2026-04-15"
+
+[[kv_namespaces]]
+binding = "SESSION"
+id = "94f3142ade61444cabbed278b11f40b5"
+preview_id = "94f3142ade61444cabbed278b11f40b5"

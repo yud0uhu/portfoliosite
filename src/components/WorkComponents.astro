@@ -80,11 +80,11 @@ const dailyUIResponse = await getDailyUIList({
       ])}
     >
       <p class={cn(["text-stroke", "md:text-4xl", "text-base"])}>Engineering</p>
-      <GetWorks client:only {worksResponse} />
+      <GetWorks client:only="svelte" {worksResponse} />
       <p class={cn(["text-stroke", "md:text-4xl", "text-base"])}>
         Daily UI Challenge
       </p>
-      <GetDailyUI client:only {dailyUIResponse} />
+      <GetDailyUI client:only="svelte" {dailyUIResponse} />
     </div>
   </div>
 </div>

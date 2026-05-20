@@ -8,16 +8,14 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npx wrangler pages deploy dist",
+    "deploy": "wrangler deploy --config dist/server/wrangler.json",
     "fmt": "bunx prettier --write ."
   },
   "dependencies": {
-    "@astrojs/check": "0.9.4",
-    "@astrojs/cloudflare": "12.2.3",
-    "@astrojs/svelte": "7.0.5",
-    "@astrojs/tailwind": "6.0.0",
-    "@lottiefiles/dotlottie-svelte": "^0.4.6",
-    "astro": "5.4.0",
+    "@astrojs/check": "^0.9.2",
+    "@astrojs/cloudflare": "13.5.0",
+    "@astrojs/svelte": "8.1.0",
+    "astro": "6.3.1",
     "astro-compress": "^2.3.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -25,19 +23,20 @@
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.13.0",
     "shadcn-svelte": "latest",
-    "svelte": "^5.20.5",
-    "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.3.3"
+    "typescript": "^5.5.0"
   },
   "devDependencies": {
+    "@lottiefiles/dotlottie-svelte": "^0.10.1",
     "@skeletonlabs/skeleton": "^2.9.2",
     "@skeletonlabs/tw-plugin": "^0.4.0",
-    "@typescript-eslint/parser": "^6.20.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/dotenv": "^8.2.3",
+    "@typescript-eslint/parser": "^8.59.3",
     "better-sqlite3": "^9.4.5",
     "commitlint-config-gitmoji": "^2.3.1",
-    "drizzle-kit": "^0.20.14",
-    "drizzle-orm": "^0.30.7",
+    "drizzle-kit": "^0.31.10",
+    "drizzle-orm": "^0.45.2",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -45,16 +44,19 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-svelte3": "^4.0.0",
-    "microcms-js-sdk": "^3.1.1",
     "kit-monorepo": "sveltejs/kit",
+    "microcms-js-sdk": "^3.1.1",
     "npm-run-all": "^4.1.5",
-    "prettier-plugin-svelte": "^3.1.2",
-    "tailwind-merge": "^2.4.0"
+    "prettier-plugin-svelte": "^3.2.6",
+    "svelte": "^5.55.5",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss": "^4.3.0",
+    "wrangler": "^4.83.0"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
   "volta": {
-    "node": "20.12.2"
+    "node": "24.14.1"
   }
 }

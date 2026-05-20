@@ -1,13 +1,13 @@
-<script>
+<script lang="ts">
   import { cn } from "../lib/utils";
   import { writable } from "svelte/store";
   import { onMount } from "svelte";
-  export let dailyUIResponse;
   const showAllContent = writable(false);
   import { fade } from "svelte/transition";
+  let { dailyUIResponse } = $props();
 
-  let divs = dailyUIResponse.contents.map(() => null);
-  let scrolls = writable(dailyUIResponse.contents.map(() => false));
+  let divs = $state(dailyUIResponse.contents.map(() => null));
+  let scrolls = $state(dailyUIResponse.contents.map(() => false));
 
   function handleClick() {
     showAllContent.set(true);
@@ -29,7 +29,6 @@
     let observer = new IntersectionObserver(callback, { threshold: 0.1 });
 
     divs.forEach((div, index) => {
-      console.log(divs);
       if (div) {
         div.dataset.index = index;
         observer.observe(div);
@@ -90,7 +89,7 @@
   </div>
   <div class={cn(["flex", "justify-center", "items-center", "w-full"])}>
     <button
-      on:click={handleClick}
+      onclick={handleClick}
       class={cn([
         "mt-4",
         "px-4",

@@ -1,9 +1,12 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import cloudflare from "@astrojs/cloudflare";
 import svelte from "@astrojs/svelte";
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    plugins: [tailwindcss()],
+  },
   integrations: [
     (await import("astro-compress")).default({
       CSS: true,
@@ -15,11 +18,9 @@ export default defineConfig({
       Image: true,
       JavaScript: true,
       SVG: true,
+      Path: ["./dist", "./Compress"],
     }),
     svelte(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
   ],
   output: "server",
   adapter: cloudflare(),
