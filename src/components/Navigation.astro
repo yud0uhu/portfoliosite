@@ -39,30 +39,38 @@ import { cn } from "../lib/utils";
     ])}
   >
     <div class={cn(["mx-16", "gap-8", "md:inline-flex"])}>
-      <p
+      <a
+        href="/about/"
+        data-astro-reload
         class={cn([
-          "hover:text-[#FF4F4B]",
-          "text-[#FEFBEB]",
+          "text-white",
           "text-xl",
           "italic",
-          "hover:underline",
+          "px-5",
+          "py-1.5",
+          "rounded-full",
+          "transition-colors",
           "text-center",
         ])}
       >
-        <a href="/about/" data-astro-reload> about me </a>
-      </p>
-      <p
+        about me
+      </a>
+      <a
+        href="/work/"
+        data-astro-reload
         class={cn([
-          "hover:text-[#FF4F4B]",
-          "text-[#FEFBEB]",
+          "text-white",
           "text-xl",
           "italic",
-          "hover:underline",
+          "px-5",
+          "py-1.5",
+          "rounded-full",
+          "transition-colors",
           "text-center",
         ])}
       >
-        <a href="/work/" data-astro-reload> work </a>
-      </p>
+        work
+      </a>
     </div>
   </nav>
 </div>

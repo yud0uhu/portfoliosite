@@ -22,10 +22,12 @@
     <a
       href="/"
       class={cn([
-        "text-amber-50",
+        "text-white",
         "text-xl",
-        "hover:text-[#FF4F4B]",
-        "hover:underline",
+        "px-4",
+        "py-1",
+        "rounded-full",
+        "transition-colors",
       ])}
     >
       top
@@ -33,10 +35,12 @@
     <a
       href="/about/"
       class={cn([
-        "text-amber-50",
+        "text-white",
         "text-xl",
-        "hover:text-[#FF4F4B]",
-        "hover:underline",
+        "px-4",
+        "py-1",
+        "rounded-full",
+        "transition-colors",
       ])}
     >
       about me
@@ -44,10 +48,12 @@
     <a
       href="/work/"
       class={cn([
-        "text-amber-50",
+        "text-white",
         "text-xl",
-        "hover:text-[#FF4F4B]",
-        "hover:underline",
+        "px-4",
+        "py-1",
+        "rounded-full",
+        "transition-colors",
       ])}
     >
       work
